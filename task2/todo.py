@@ -1,14 +1,17 @@
 import os
 
+script_dir = os.path.dirname(os.path.realpath(__file__))
+tasks_file = os.path.join(script_dir, 'tasks.txt')
+
 def load_tasks():
-    if os.path.exists('tasks.txt'):
-        with open('tasks.txt', 'r') as file:
+    if os.path.exists(tasks_file):
+        with open(tasks_file, 'r') as file:
             tasks = file.readlines()
         return [task.strip() for task in tasks]
     return []
 
 def save_tasks(tasks):
-    with open('tasks.txt', 'w') as file:
+    with open(tasks_file, 'w') as file:
         for task in tasks:
             file.write(task + '\n')
 
