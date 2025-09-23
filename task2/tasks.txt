@@ -1,4 +1,0 @@
-to do the to do list in python 
-uplode the file to the git hub
-submit the task compleation 
-prepare the interview question in the pdf
